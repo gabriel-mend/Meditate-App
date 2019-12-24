@@ -15,7 +15,23 @@ body {
   background-image: url("/assets/nature-horizon-silhouette-person-mountain-sky-652631-pxhere.com.jpg");
   background-position: center;
   background-size: cover;
+  transition: .5s;
 }
+
+h1::after{
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: writerEffect .7s infinite;
+}
+@keyframes writerEffect {
+  0%, 100%{
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+} 
 .container {
   position: relative;
   width: 1024px;
@@ -79,6 +95,9 @@ body {
   justify-content: center;
   border-radius: 8px;
   cursor: pointer;
+}
+.audio-block:hover {
+  opacity: 0.8;
 }
 .audio-block::after {
   content: "";
